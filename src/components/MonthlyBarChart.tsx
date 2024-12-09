@@ -56,16 +56,17 @@ const chartData = categoryNames.map((category) => {
 
 export default function MonthlyBarChart() {
   return (
-    <BarChart
-      xAxis={[{ scaleType: 'band', data: months }]}
-      yAxis={[{ scaleType: 'linear' }]}
-      series={chartData.map((categoryData) => ({
-        data: categoryData.data,
-        label: categoryData.label,
-      }))}
-      width={500}
-      height={300}
-      className='border rounded p-1 shadow shadow-gray-300 shadow-md mb-2'
-    />
+    <div className='border rounded p-1 shadow shadow-gray-300 flex items-center shadow-md mb-2'>
+      <BarChart
+        xAxis={[{ scaleType: 'band', data: months }]}
+        yAxis={[{ scaleType: 'linear' }]}
+        series={chartData.map((categoryData) => ({
+          data: categoryData.data,
+          label: categoryData.label,
+        }))}
+        width={500}
+        height={300}
+      />
+    </div>
   );
 }

@@ -118,7 +118,7 @@ const BasicPie = () => {
         <ReusablePieChart data={categoryData} width={300} height={100} />
       </div>
 
-      <div className='flex p-2 gap-2 flex-col justify-center items-center border shadow-gray-300 shadow-md rounded'>
+      <div className='flex p-2 mb-2 gap-2 flex-col justify-center items-center border shadow-gray-300 shadow-md rounded'>
         <h4>Gender</h4>
         <ReusablePieChart data={genderData} width={300} height={100} />
       </div>

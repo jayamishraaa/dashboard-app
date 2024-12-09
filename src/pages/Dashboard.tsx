@@ -5,13 +5,13 @@ import userDashboardData from '../data';
 
 const Dashboard = () => {
     return (
-      <div className='lg:flex gap-4 ml-30 lg:ml-0'>
+      <div className='lg:flex gap-4 ml-30 p-2 lg:ml-0'>
         {/* <ul>
           {userDashboardData.map((item) => (
             <li key={item.id}>{item.username}</li>
           ))} */}
-          {/* <MonthlyBarChart />
-          <BasicPie /> */}
+          <MonthlyBarChart />
+          <BasicPie />
           <MonthlyLineChart />
         {/* </ul> */}
       </div>

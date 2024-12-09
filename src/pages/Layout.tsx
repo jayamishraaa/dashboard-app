@@ -128,21 +128,21 @@ function NavigationItem({ title, icon, to }: { title: string; icon: React.ReactN
 //     </Box>
 //   );
 // }
-function DemoPageContent({ pathname }: { pathname: string }) {
-  return (
-    <Box
-      sx={{
-        py: 4,
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        textAlign: 'center',
-      }}
-    >
-      <Outlet />
-    </Box>
-  );
-}
+// function DemoPageContent({ pathname }: { pathname: string }) {
+//   return (
+//     <Box
+//       sx={{
+//         py: 4,
+//         display: 'flex',
+//         flexDirection: 'column',
+//         alignItems: 'center',
+//         textAlign: 'center',
+//       }}
+//     >
+//       <Outlet />
+//     </Box>
+//   );
+// }
 
 interface DemoProps {
   /**
@@ -169,7 +169,9 @@ export default function DashboardLayoutBasic(props: DemoProps) {
       window={demoWindow}
     >
       <DashboardLayout>
-        <DemoPageContent pathname={router.pathname} />
+
+        <Outlet />
+        
       </DashboardLayout>
     </AppProvider>
     // preview-end
