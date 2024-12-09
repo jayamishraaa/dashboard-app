@@ -1,7 +1,7 @@
 import  BasicPie  from '../components/BasicPie';
 import MonthlyBarChart from '../components/MonthlyBarChart';
 import MonthlyLineChart from '../components/MonthlyLineChart';
-import userDashboardData from '../data';
+import TopCustomers from '../components/TopCustomers';
 
 const Dashboard = () => {
     return (
@@ -13,6 +13,7 @@ const Dashboard = () => {
           <MonthlyBarChart />
           <BasicPie />
           <MonthlyLineChart />
+          <TopCustomers />
         {/* </ul> */}
       </div>
     );

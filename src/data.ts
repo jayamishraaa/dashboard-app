@@ -236,7 +236,141 @@ const userDashboardData = [
           { category: 'Clothing', products: ['Sneakers', 'Jacket', 'T-shirt', 'Pants', 'Shirt', 'Sweater'] },
           { category: 'Groceries', products: ['Lettuce', 'Eggs', 'Cucumber', 'Bananas', 'Tomatoes', 'Carrots'] },
         ],
-      }      
+      },
+      {
+        id: 6,
+        username: "alex_parker",
+        email: "alex.parker@example.com",
+        gender: "Male",
+        totalOrders: 40,
+        totalRevenue: 1250.45,
+        lastLogin: "2024-12-09T12:00:00",
+        activeStatus: true,
+        notifications: 4,
+        purchases: {
+          electronics: [
+            {
+              productId: 114,
+              productName: "Gaming Laptop",
+              price: 1500.00,
+              quantity: 1,
+              dateOfPurchase: "2024-02-10"
+            },
+            {
+              productId: 115,
+              productName: "Wireless Earbuds",
+              price: 120.00,
+              quantity: 2,
+              dateOfPurchase: "2024-05-12"
+            }
+          ],
+          clothing: [
+            {
+              productId: 212,
+              productName: "Winter Coat",
+              price: 200.00,
+              quantity: 1,
+              dateOfPurchase: "2024-11-15"
+            },
+            {
+              productId: 213,
+              productName: "Running Shoes",
+              price: 90.00,
+              quantity: 1,
+              dateOfPurchase: "2024-09-20"
+            }
+          ],
+          groceries: [
+            {
+              productId: 313,
+              productName: "Organic Spinach",
+              price: 3.50,
+              quantity: 4,
+              dateOfPurchase: "2024-12-01"
+            },
+            {
+              productId: 314,
+              productName: "Almond Milk",
+              price: 4.99,
+              quantity: 3,
+              dateOfPurchase: "2024-12-05"
+            }
+          ]
+        },
+        recentActivity: [
+          {
+            date: "2024-12-08",
+            action: "Added a new payment method",
+            type: "payment"
+          },
+          {
+            date: "2024-12-07",
+            action: "Reviewed product #115",
+            type: "review"
+          }
+        ],
+        categories: [
+          {
+            category: "Electronics",
+            products: ["Gaming Laptop", "Wireless Earbuds"]
+          },
+          {
+            category: "Clothing",
+            products: ["Winter Coat", "Running Shoes"]
+          },
+          {
+            category: "Groceries",
+            products: ["Organic Spinach", "Almond Milk"]
+          }
+        ]
+      },      
+      {
+        id: 7,
+        username: 'sarah_adams',
+        email: 'sarah.adams@example.com',
+        gender: 'Female',
+        totalOrders: 39,
+        totalRevenue: 1205.80,
+        lastLogin: '2024-12-08T20:30:00',
+        activeStatus: true,
+        notifications: 4,
+        purchases: {
+          electronics: [
+            { productId: 120, productName: 'Tablet', price: 299.99, quantity: 1, dateOfPurchase: '2024-02-15' },
+            { productId: 121, productName: 'Noise-Cancelling Headphones', price: 150.00, quantity: 1, dateOfPurchase: '2024-04-10' },
+            { productId: 122, productName: 'Smartphone', price: 799.99, quantity: 1, dateOfPurchase: '2024-06-25' },
+            { productId: 123, productName: 'Laptop', price: 950.00, quantity: 1, dateOfPurchase: '2024-08-12' },
+            { productId: 124, productName: 'Smartwatch', price: 200.00, quantity: 1, dateOfPurchase: '2024-10-15' },
+          ],
+          clothing: [
+            { productId: 225, productName: 'Winter Coat', price: 120.00, quantity: 1, dateOfPurchase: '2024-01-20' },
+            { productId: 226, productName: 'Jeans', price: 45.00, quantity: 2, dateOfPurchase: '2024-03-18' },
+            { productId: 227, productName: 'Scarf', price: 25.00, quantity: 1, dateOfPurchase: '2024-05-05' },
+            { productId: 228, productName: 'Blouse', price: 35.00, quantity: 3, dateOfPurchase: '2024-07-22' },
+            { productId: 229, productName: 'Sweater', price: 60.00, quantity: 1, dateOfPurchase: '2024-09-10' },
+          ],
+          groceries: [
+            { productId: 330, productName: 'Apples', price: 3.50, quantity: 4, dateOfPurchase: '2024-01-12' },
+            { productId: 331, productName: 'Bananas', price: 2.50, quantity: 5, dateOfPurchase: '2024-03-22' },
+            { productId: 332, productName: 'Milk', price: 1.99, quantity: 6, dateOfPurchase: '2024-05-15' },
+            { productId: 333, productName: 'Lettuce', price: 1.80, quantity: 3, dateOfPurchase: '2024-07-05' },
+            { productId: 334, productName: 'Carrots', price: 2.00, quantity: 5, dateOfPurchase: '2024-10-02' },
+          ],
+        },
+        recentActivity: [
+          { date: '2024-12-08', action: 'Completed Order #39', type: 'order' },
+          { date: '2024-12-07', action: 'Updated profile picture', type: 'profile' },
+          { date: '2024-12-06', action: 'Added a new shipping address', type: 'profile' },
+          { date: '2024-12-05', action: 'Logged in from desktop', type: 'login' },
+        ],
+        categories: [
+          { category: 'Electronics', products: ['Tablet', 'Noise-Cancelling Headphones', 'Smartphone', 'Laptop', 'Smartwatch'] },
+          { category: 'Clothing', products: ['Winter Coat', 'Jeans', 'Scarf', 'Blouse', 'Sweater'] },
+          { category: 'Groceries', products: ['Apples', 'Bananas', 'Milk', 'Lettuce', 'Carrots'] },
+        ],
+      },
+      
+           
   ];
   
 export default userDashboardData
