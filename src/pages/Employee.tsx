@@ -1,8 +1,10 @@
 import { useState, ChangeEvent } from "react";
 import Card from "../components/Card";
 import { employeeData } from "../data";
+import BasicModal from "../components/BasicModal";
 
 interface Employee {
+    id: number,
     name: string;
     department: string;
     job_title: string;
@@ -13,16 +15,19 @@ interface FormData {
     department: string;
     title: string;
 }
-
+ 
 const EmployeePage = () => {
     const [formData, setFormData] = useState<FormData>({
         name: '',
         department: '',
         title: '',
     });
-
+    
+    const [isModal, setIsModal] = useState(false);
+    const [modalId, setModalId] = useState(0);
+ 
     const [filteredEmployeeData, setFilteredEmployeeData] = useState<Employee[]>(employeeData);
-    const [showAll, setShowAll] = useState<boolean>(false); // New state to toggle between showing all or 10 entries
+    const [showAll, setShowAll] = useState<boolean>(false); 
 
     const handleSmartSearch = (e: ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
@@ -48,8 +53,14 @@ const EmployeePage = () => {
 
     const displayedEmployees = showAll
         ? filteredEmployeeData
-        : filteredEmployeeData.slice(0, 10); // Show only first 10 entries if not showing all
+        : filteredEmployeeData.slice(0, 10);
 
+    const handleModal = (id: number) => (event: React.MouseEvent<HTMLButtonElement>) => {
+        event.preventDefault();
+        setIsModal(bool => !bool)
+        setModalId(id)
+    };
+        
     return (
         <div>
             <div className="flex">
@@ -96,10 +107,13 @@ const EmployeePage = () => {
                             <li className="flex-1 text-gray-700">{value.name}</li>
                             <li className="flex-1 text-gray-600">{value.department}</li>
                             <li className="flex-1 text-gray-600">{value.job_title}</li>
+                            <li><button className="bg-gray-300 rounded p-1 text-sm"
+                                onClick={handleModal(value.id)}
+                            >Details</button></li>
                         </ul>
                     ))}
                 </div>
-
+                {isModal && modalId !== null && <BasicModal id={modalId} isModal={isModal} setIsModal={setIsModal} />}
                 {filteredEmployeeData.length > 10 && (
                     <button
                         onClick={toggleShowAll}
